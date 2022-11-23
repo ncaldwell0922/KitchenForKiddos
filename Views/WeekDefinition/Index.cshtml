@@ -1,5 +1,43 @@
+@model IEnumerable<KitchenForKiddosMVC.Models.WeekDefinition.WeekListItem>
+
 @{
-    ViewData["Title"] = "Week Definition";
+    ViewData["Title"] = "Meal Weeks Overview";
 }
 
 <h1>Week Definition Index</h1>
+<p>
+    @* @Html.ActionLink("Create")*@
+    <a asp-action="Create">Create</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Notes)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Notes)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
