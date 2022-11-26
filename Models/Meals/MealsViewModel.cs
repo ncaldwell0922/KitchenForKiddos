@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
 
-namespace KitchenForKiddosMVC.Models
+namespace KitchenForKiddosMVC.Models.Meals
 {
     public class MealsViewModel
     {

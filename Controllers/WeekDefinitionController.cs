@@ -23,7 +23,7 @@ namespace KitchenForKiddosMVC.Controllers
         public async Task<IActionResult> Index()
         {
             var weekLists = await _service.GetAllWeeksAsync();
-            return View(weekLists);
+            return View(weekLists); 
         }
     }
 }
